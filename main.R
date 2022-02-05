@@ -178,8 +178,5 @@ summarize_expression <- function(exprs) {
   xvar_probes <- cbind(lapply(exprs[2:54676], FUN = var))
   mean_var_probe = tibble(mean_exp = mean_probes, variance = xvar_probes, probe = names(mean_probes))
   
-  mean_var_probe <- mean_var_probe %>% 
-    mutate_at(c(1:2), as.numeric)
-  
   return (mean_var_probe)
 }
