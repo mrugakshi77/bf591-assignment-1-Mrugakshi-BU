@@ -1,6 +1,6 @@
 ---
 title: "Assignment 1"
-author: Dakota Hawkins
+author: Mrugakshi Chidrawar
 output: html_document
 ---
 
