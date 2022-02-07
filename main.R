@@ -175,9 +175,7 @@ summarize_expression <- function(exprs) {
     mutate_at(c(2:54676), as.numeric)
   
   mean_probes <- select(exprs, where(is.numeric)) %>% colMeans()
-  var_probes <- apply(dplyr::select(e, !c("subject_id")), 2, var)
-  
-  xvar_probes <- cbind(lapply(exprs[2:54676], FUN = var))
+  var_probes <- apply(dplyr::select(exprs, !c("subject_id")), 2, var)
   mean_var_probe = tibble(mean_exp = mean_probes, variance = var_probes, probe = names(mean_probes))
   
   return (mean_var_probe)
